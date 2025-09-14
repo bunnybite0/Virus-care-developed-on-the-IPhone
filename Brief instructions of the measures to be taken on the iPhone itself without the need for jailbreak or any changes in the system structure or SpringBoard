@@ -1,0 +1,90 @@
+# Hardening Safari & Messages (iMessage) — Quick Guide
+
+*Resumo rápido:* este guia mostra configurações nativas do iPhone (iOS) para reduzir muito o risco de golpes e explorações que chegam pelo navegador (Safari) e pelo app Mensagens/iMessage. É focado em medidas seguras e suportadas pela Apple — *não* tenta modificar kernel, firmware ou contornar proteções do sistema.
+
+> ⚠️ Aviso: isto reduz riscos de ataques baseados em navegador e mensagens, mas *não* garante proteção contra exploits sofisticados (zero-days, spyware direcionado que explora o kernel/firmware) ou contra dispositivos que já foram jailbroken.
+
+---
+
+## 1 — Passos rápidos para Safari (navegador)
+1. *Bloquear pop-ups*  
+   Ajustes > Apps > Safari > Block Pop-ups → On.  
+   Isto corta a maioria dos scareware/pop-ups maliciosos.  [oai_citation:0‡Apoio Apple](https://support.apple.com/en-us/102524?utm_source=chatgpt.com)
+
+2. *Ativar aviso de sites fraudulentos*  
+   Ajustes > Apps > Safari > Fraudulent Website Warning → On.  
+   Safari checa e alerta sobre sites suspeitos.  [oai_citation:1‡Apoio Apple](https://support.apple.com/en-us/102524?utm_source=chatgpt.com)
+
+3. *Impedir rastreamento entre sites*  
+   Ajustes > Apps > Safari > Prevent Cross-Site Tracking → On.  
+   Reduz cookies e fingerprinting entre domínios.  [oai_citation:2‡Apoio Apple](https://support.apple.com/en-in/guide/iphone/iphb01fc3c85/ios?utm_source=chatgpt.com)
+
+4. *Usar Content Blockers / extensões de bloqueio*  
+   Ajustes > Safari > Extensions → instalar/ativar bloqueadores como uBlock-style ou bloqueadores de scripts. Isso impede execução automática de scripts maliciosos.  [oai_citation:3‡Apoio Apple](https://support.apple.com/en-in/guide/iphone/iphb01fc3c85/ios?utm_source=chatgpt.com)
+
+5. *Desativar JavaScript (quando necessário / por site)*  
+   Ajustes > Safari > Advanced > JavaScript → Off (ou use a opção por site via extensões). Atenção: muitas páginas quebram sem JS; use apenas para navegação de alto risco.  [oai_citation:4‡Verizon](https://www.verizon.com/support/knowledge-base-207025/?utm_source=chatgpt.com)
+
+6. *Limitar permissões por site*  
+   Ajustes > Safari > Settings for Websites → ajuste Camera / Microphone / Location / Downloads para *Ask* ou *Deny* por padrão. Isso evita uso indevido de sensores.  [oai_citation:5‡Apoio Apple](https://support.apple.com/en-in/guide/iphone/iphb01fc3c85/ios?utm_source=chatgpt.com)
+
+7. *Navegação Privada + limpar dados*  
+   Use *Private Browsing* quando for necessário e ocasionalmente Settings > Safari > Clear History and Website Data.
+
+---
+
+## 2 — Passos rápidos para Messages / iMessage
+1. *Filtrar remetentes desconhecidos*  
+   Ajustes > Apps > Messages > Filter Unknown Senders → On. Mensagens de não-contatos vão para uma aba separada e sem notificação. Ótimo contra spam e mallinks por SMS/iMessage.  [oai_citation:6‡Apoio Apple](https://support.apple.com/guide/iphone/block-filter-and-report-messages-iph203ab0be4/ios?utm_source=chatgpt.com)
+
+2. *Bloquear contatos / números suspeitos*  
+   Abra a conversa → toque no nome/numero → *Block this Caller*. Simples e eficiente.  [oai_citation:7‡Apoio Apple](https://support.apple.com/en-us/111104?utm_source=chatgpt.com)
+
+3. *Evitar mostrar pré-visualizações no bloqueio da tela*  
+   Ajustes > Notifications > Messages > Show Previews → When Unlocked ou Never. Isso impede que links/payloads sejam visíveis sem desbloquear o aparelho.  [oai_citation:8‡Apoio Apple](https://support.apple.com/guide/iphone/change-notification-settings-iph7c3d96bab/ios?utm_source=chatgpt.com)
+
+4. *Não abrir anexos / links de remetentes desconhecidos*  
+   Se receber MMS ou links de desconhecidos, não toque — preferível visualizar apenas no decoy/sandbox (PC) ou apagar.
+
+5. *Desativar auto-download / rever anexos grandes*  
+   Revise anexos em Settings > General > iPhone Storage > Review Large Attachments e delete o que não for necessário. (Ajuda a reduzir exposição e economizar espaço).  [oai_citation:9‡Comunidade de Suporte Apple](https://discussions.apple.com/thread/254963158?utm_source=chatgpt.com)
+
+---
+
+## 3 — Medidas gerais do iOS que ajudam bastante
+- *Manter iOS sempre atualizado* (patches corrigem vulnerabilidades).  
+- *Nunca jailbreak* — remove proteções e abre o kernel a malware.  
+- *Ativar App Privacy Report* para monitorar atividade de apps e conexões suspeitas: Settings > Privacy & Security > App Privacy Report > Turn On. Use-o para detectar apps que fazem conexões estranhas.  [oai_citation:10‡Apoio Apple](https://support.apple.com/en-us/102188?utm_source=chatgpt.com)  
+- *Usar Screen Time / Content & Privacy Restrictions* para bloquear sites e downloads perigosos: Settings > Screen Time > Content & Privacy Restrictions.  [oai_citation:11‡Apoio Apple](https://support.apple.com/guide/iphone/block-apps-app-downloads-websites-purchases-iph3ff83f3b1/ios?utm_source=chatgpt.com)
+
+---
+
+## 4 — Checklist curto (colar num favorited note)
+- [ ] Block Pop-ups = ON.  
+- [ ] Fraudulent Website Warning = ON.  
+- [ ] Prevent Cross-Site Tracking = ON.  
+- [ ] Content blocker instalado e ativo.  
+- [ ] JavaScript OFF por site de alto risco.  
+- [ ] Filter Unknown Senders = ON.  
+- [ ] Messages previews = When Unlocked / Never.  
+- [ ] App Privacy Report = ON.  
+- [ ] iOS atualizado.  
+- [ ] Sem jailbreak no dispositivo.
+
+---
+
+## 5 — Limitações (LEIA ANTES)
+- Essas medidas reduzem *muito* o risco de golpes baseados em navegador e mensagens, mas *não* protegem contra:
+  - Exploits kernel/firmware ou spyware altamente direcionado (ex.: cadeias de zero-day).  
+  - Ataques que já obtiveram acesso root ao dispositivo (jailbroken).  
+  - Mensagens legitimamente enviadas por contatos confiáveis que contenham links maliciosos — o risco humano persiste.  
+Sempre combine essas etapas com bom senso: desconfiar de links e enviar para quarentena antes de abrir.
+
+---
+
+## 6 — Fonte / leituras úteis
+- Apple Support — Block pop-ups & Fraudulent Website Warning (Safari).  [oai_citation:12‡Apoio Apple](https://support.apple.com/en-us/102524?utm_source=chatgpt.com)  
+- Apple Support — Filter messages from unknown senders (Messages).  [oai_citation:13‡Apoio Apple](https://support.apple.com/guide/iphone/block-filter-and-report-messages-iph203ab0be4/ios?utm_source=chatgpt.com)  
+- Apple Support — App Privacy Report (Privacy & Security).  [oai_citation:14‡Apoio Apple](https://support.apple.com/en-us/102188?utm_source=chatgpt.com)  
+- Apple Support — Prevent Cross-Site Tracking (Safari).  [oai_citation:15‡Apoio Apple](https://support.apple.com/en-in/guide/iphone/iphb01fc3c85/ios?utm_source=chatgpt.com)  
+- Apple Support — Change notification settings / Show Previews.  [oai_citation:16‡Apoio Apple](https://support.apple.com/guide/iphone/change-notification-settings-iph7c3d96bab/ios?utm_source=chatgpt.)
